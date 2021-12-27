@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+  margin: 0; 
+  padding: 0;
+}
+
+div#gameBoard{
+  border: 1px solid red;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 700px;
+  padding: 10px;
+  margin: 100px auto;
+  gap: 10px;
+}
+
+div#gameBoard > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid blue;
+  width: 200px;
+  height: 200px;
+}
