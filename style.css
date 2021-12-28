@@ -4,23 +4,144 @@
   padding: 0;
 }
 
+/* font style used for symbols */
+@font-face {
+  font-family: Gravis;
+  src: url("./Gravis.ttf");
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url("./RobotoRegular.ttf");
+}
+
+/* Set some variables for easy theming */
+:root {
+  --board-color: #B80C09;
+  --page-background-color : #E5E7E6;
+  --symbol-color: #141301;
+  --button-color: #1D8A99;
+  --button-active-color: #197885;
+  --symbol-font: Gravis;
+  --board-thickness: 4px;
+}
+
+/* Simply set the background color of the page.  */
+html{
+  background-color: var(--page-background-color);
+}
+
+/* structure the app layout */
+div#app{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+/* Style for the nav */
+div#navContainer{
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+div.scoreContainer{
+  /* border: 1px solid red; */
+  width: 15rem;
+  height: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 10px;
+  gap: 5px;
+  align-items: center;
+  font-size: 1.5rem;
+  font-family: Roboto;
+}
+
+/* Styles for the reset button */
+div > button {
+  width: 200px;
+  height: 50px;
+  background-color: var(--page-background-color);
+  border: 2px solid var(--button-color);
+  border-radius: 1.1rem;
+  color: var(--button-color);
+  font-size: 1.5rem;
+}
+
+div > button:hover{
+  background-color: var(--button-color);
+  color: var(--page-background-color);
+  transition: 150ms;
+}
+
+div > button:active{
+  background-color: var(--button-active-color);
+  transition: 5ms;
+}
+
+/* Style for the game board */
 div#gameBoard{
-  border: 1px solid red;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   width: 700px;
   padding: 10px;
-  margin: 100px auto;
-  gap: 10px;
+  margin: 0 auto;
 }
 
 div#gameBoard > * {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid blue;
   width: 200px;
   height: 200px;
+  font-size: 10rem;
+  color: var(--symbol-color);
+  font-family: var(--symbol-font);
+}
+
+div[data-id="0"]{
+  border-right: var(--board-thickness) solid var(--board-color);
+  border-bottom: var(--board-thickness) solid var(--board-color);
+}
+div[data-id="1"]{
+  border-left: var(--board-thickness) solid var(--board-color);
+  border-right: var(--board-thickness) solid var(--board-color);
+  border-bottom: var(--board-thickness) solid var(--board-color);
+}
+div[data-id="2"]{
+  border-left: var(--board-thickness) solid var(--board-color);
+  border-bottom: var(--board-thickness) solid var(--board-color);
+}
+div[data-id="3"]{
+  border-top: var(--board-thickness) solid var(--board-color);
+  border-right: var(--board-thickness) solid var(--board-color);
+  border-bottom: var(--board-thickness) solid var(--board-color);
+}
+div[data-id="4"]{
+  border: var(--board-thickness) solid var(--board-color);
+}
+div[data-id="5"]{
+  border-top: var(--board-thickness) solid var(--board-color);
+  border-left: var(--board-thickness) solid var(--board-color);
+  border-bottom: var(--board-thickness) solid var(--board-color);
+}
+div[data-id="6"]{
+  border-top: var(--board-thickness) solid var(--board-color);
+  border-right: var(--board-thickness) solid var(--board-color);
+}
+div[data-id="7"]{
+  border-top: var(--board-thickness) solid var(--board-color);
+  border-left: var(--board-thickness) solid var(--board-color);
+  border-right: var(--board-thickness) solid var(--board-color);
+}
+div[data-id="8"]{
+  border-top: var(--board-thickness) solid var(--board-color);
+  border-left: var(--board-thickness) solid var(--board-color);
 }

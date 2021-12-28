@@ -9,16 +9,34 @@
   <title>Tic Tac Toe</title>
 </head>
 <body>
-  <div id="gameBoard">
-    <div id="0"></div>
-    <div id="1"></div>
-    <div id="2"></div>
-    <div id="3"></div>
-    <div id="4"></div>
-    <div id="5"></div>
-    <div id="6"></div>
-    <div id="7"></div>
-    <div id="8"></div>
+  <div id="app">
+
+    <div id=navContainer>
+      <div class="scoreContainer">
+        <p>Player 1</p>
+        <p class="score">0</p>
+      </div>
+      <div class="scoreContainer">
+        <p>Player 2</p>
+        <p class="score">0</p>
+      </div>
+    </div>
+
+    <div id="gameBoard">
+      <div data-id="0" id="zero"></div>
+      <div data-id="1" id="one"></div>
+      <div data-id="2" id="two"></div>
+      <div data-id="3" id="three"></div>
+      <div data-id="4" id="four"></div>
+      <div data-id="5" id="five"></div>
+      <div data-id="6" id="six"></div>
+      <div data-id="7" id="seven"></div>
+      <div data-id="8" id="eight"></div>
+    </div>
+  
+    <div class="buttonContainer">
+      <button>Reset</button>
+    </div>
   </div>
 </body>
 </html>
