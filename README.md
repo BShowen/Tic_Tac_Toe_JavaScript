@@ -1,3 +1,4 @@
+![Screen shot](./assets/images/screenShot.png)
 # Tic-Tac-Toe 
 This is Tic-Tac-Toe created with vanilla JavaScript. 
 ## Skills learned during this project

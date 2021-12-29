@@ -7,12 +7,12 @@
 /* font style used for symbols */
 @font-face {
   font-family: Gravis;
-  src: url("./Gravis.ttf");
+  src: url("./../fonts/Gravis.ttf");
 }
 
 @font-face {
   font-family: Roboto;
-  src: url("./RobotoRegular.ttf");
+  src: url("./../fonts/RobotoRegular.ttf");
 }
 
 /* Set some variables for easy theming */
